@@ -1,0 +1,61 @@
+name: Documentation Issue
+description: Report an issue with the p5.js documentation
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve p5.js documentation! Please fill out the form below.
+
+  - type: input
+    id: url
+    attributes:
+      label: Documentation URL
+      description: Link to the documentation page with the issue
+      placeholder: https://p5js.org/reference/...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Type of Issue
+      description: What kind of documentation issue is this?
+      options:
+        - Incorrect information
+        - Missing information
+        - Typo or grammar
+        - Broken example
+        - Unclear explanation
+        - Missing example
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the documentation issue in detail
+      placeholder: The description for `fill()` says... but it should say...
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested Fix
+      description: If you have a suggestion for how to fix the issue, please share it here
+      placeholder: The correct description should be...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched the existing issues to make sure this hasn't been reported already
+          required: true
+        - label: I am willing to help fix this documentation issue
+          required: false
