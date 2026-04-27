@@ -1,0 +1,82 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for p5.js
+title: "[Feature Request]: "
+labels: ["enhancement", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new feature! Please fill out this form as completely as possible.
+        Before submitting, please search existing issues to see if your idea has already been requested.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Most appropriate sub-area of p5.js?
+      description: Check all that apply.
+      options:
+        - label: Accessibility
+        - label: Color
+        - label: Core/Environment/Rendering
+        - label: Data
+        - label: DOM
+        - label: Events
+        - label: Image
+        - label: IO
+        - label: Math
+        - label: Motion
+        - label: Shape
+        - label: Structure
+        - label: Typography
+        - label: Utilities
+        - label: WebGL
+        - label: Build process
+        - label: Unit testing
+        - label: Website
+        - label: Documentation
+        - label: ES6 / Modules
+        - label: Friendly Errors
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+      placeholder: Describe the problem you're trying to solve.
+    validations:
+      required: false
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+      placeholder: What would you like p5.js to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+      placeholder: What other approaches have you thought about?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other context, mockups, or screenshots about the feature request here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/processing/p5.js/blob/main/CODE_OF_CONDUCT.md).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
