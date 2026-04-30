@@ -24,7 +24,8 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "preview": "vite preview",
-    "clean": "rm -rf dist lib"
+    "clean": "rm -rf dist lib",
+    "clean:all": "rm -rf dist lib node_modules"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
