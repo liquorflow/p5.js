@@ -48,7 +48,8 @@ class p5 {
     // Internal state
     this._setupDone = false;
     this._preloadDone = false;
-    this._frameRate = 60;
+    // Default to 30fps instead of 60 - easier on CPU for my projects
+    this._frameRate = 30;
     this._frameCount = 0;
     this._isGlobal = false;
     this._loop = true;
@@ -124,34 +125,4 @@ class p5 {
       this.draw();
     }
 
-    this._requestAnimId = window.requestAnimationFrame(() => this._draw());
-  }
-
-  /**
-   * Stops the draw loop.
-   */
-  noLoop() {
-    this._loop = false;
-    window.cancelAnimationFrame(this._requestAnimId);
-  }
-
-  /**
-   * Resumes the draw loop.
-   */
-  loop() {
-    if (!this._loop) {
-      this._loop = true;
-      this._draw();
-    }
-  }
-
-  /**
-   * Returns the current frame count.
-   * @returns {number}
-   */
-  get frameCount() {
-    return this._frameCount;
-  }
-}
-
-export default p5;
+    this._requestAnimId = window.requestAnimationFrame(() => this._draw())
